@@ -134,144 +134,26 @@ section h2 {
     text-shadow: 0 0 10px #f72585;
 }
 
-/* ==========================================
-   EDUCATION TIMELINE
-   Desktop + Laptop + Tablet + Mobile
-========================================== */
-
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px 0;
+/* Education */
+.educations-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-/* Center vertical line */
-.timeline::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    background: #7209b7;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Timeline card */
-.timeline-item {
-    position: relative;
-    width: 45%;
-    padding: 20px;
+.education-card {
     background: #1a1a1a;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(114, 9, 183, 0.4);
-    margin-bottom: 40px;
-    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 0 15px #7209b7;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Left side cards */
-.timeline-item:nth-child(odd) {
-    left: 0;
-}
-
-/* Right side cards */
-.timeline-item:nth-child(even) {
-    left: 55%;
-}
-
-/* Timeline dots */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background: #f72585;
-    border-radius: 50%;
-    top: 25px;
-}
-
-/* Left card dot */
-.timeline-item:nth-child(odd)::before {
-    right: -34px;
-}
-
-/* Right card dot */
-.timeline-item:nth-child(even)::before {
-    left: -34px;
-}
-
-.timeline-item h3 {
-    color: #f72585;
-    margin-bottom: 10px;
-}
-
-.timeline-item span {
-    display: block;
-    color: #cccccc;
-    margin-bottom: 10px;
-}
-
-.timeline-item p {
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin: 5px 0;
-}
-
-/* ==========================================
-   TABLET VIEW
-========================================== */
-
-@media (max-width: 992px) {
-
-    .timeline::before {
-        left: 30px;
-    }
-
-    .timeline-item {
-        width: calc(100% - 80px);
-        left: 60px !important;
-    }
-
-    .timeline-item::before {
-        left: -39px !important;
-    }
-}
-
-/* ==========================================
-   MOBILE VIEW
-========================================== */
-
-@media (max-width: 600px) {
-
-    .timeline {
-        padding: 10px;
-    }
-
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: calc(100% - 45px);
-        left: 35px !important;
-        padding: 15px;
-    }
-
-    .timeline-item::before {
-        width: 14px;
-        height: 14px;
-        left: -27px !important;
-    }
-
-    .timeline-item h3 {
-        font-size: 18px;
-    }
-
-    .timeline-item p,
-    .timeline-item span {
-        font-size: 14px;
-    }
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #f72585, 0 0 40px #7209b7;
 }
 
 /* Projects */
