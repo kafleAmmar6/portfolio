@@ -134,77 +134,145 @@ section h2 {
     text-shadow: 0 0 10px #f72585;
 }
 
-/* Timeline (Education) */
+/* ==========================================
+   EDUCATION TIMELINE
+   Desktop + Laptop + Tablet + Mobile
+========================================== */
+
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px 0;
 }
 
-.timeline::after {
-    content: '';
+/* Center vertical line */
+.timeline::before {
+    content: "";
     position: absolute;
-    width: 6px;
-    background-color: #7209b7;
+    width: 4px;
+    background: #7209b7;
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    transform: translateX(-50%);
 }
 
+/* Timeline card */
 .timeline-item {
-    width: 90%;
+    position: relative;
+    width: 45%;
     padding: 20px;
     background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #7209b7;
-    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(114, 9, 183, 0.4);
+    margin-bottom: 40px;
     text-align: left;
 }
 
-.timeline-item.left {
-    margin-right: 5%;
+/* Left side cards */
+.timeline-item:nth-child(odd) {
+    left: 0;
 }
 
-.timeline-item.right {
-    margin-left: 5%;
+/* Right side cards */
+.timeline-item:nth-child(even) {
+    left: 55%;
 }
 
-.timeline-item::after {
-    content: '';
+/* Timeline dots */
+.timeline-item::before {
+    content: "   ";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #f72585;
+    width: 18px;
+    height: 18px;
+    background: #f72585;
     border-radius: 50%;
-    top: 20px;
-    z-index: 1;
+    top: 25px;
 }
 
-.timeline-item.left::after {
-    right: -10px;
+/* Left card dot */
+.timeline-item:nth-child(odd)::before {
+    right: -34px;
 }
 
-.timeline-item.right::after {
-    left: -10px;
+/* Right card dot */
+.timeline-item:nth-child(even)::before {
+    left: -34px;
 }
 
 .timeline-item h3 {
-    margin-bottom: 10px;
     color: #f72585;
+    margin-bottom: 10px;
+    padding-left:18px;
 }
 
 .timeline-item span {
-    font-size: 0.9rem;
-    color: #e0e0e0;
+    display: block;
+    color: #cccccc;
+    margin-bottom: 10px;
 }
 
 .timeline-item p {
-    margin-top: 5px;
-    font-size: 1rem;
-    line-height: 1.4;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* ==========================================
+   TABLET VIEW
+========================================== */
+
+@media (max-width: 992px) {
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: calc(100% - 80px);
+        left: 60px !important;
+    }
+
+    .timeline-item::before {
+        left: -39px !important;
+    }
+}
+
+/* ==========================================
+   MOBILE VIEW
+========================================== */
+
+@media (max-width: 600px) {
+
+    .timeline {
+        padding: 10px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: calc(100% - 45px);
+        left: 35px !important;
+        padding: 15px;
+    }
+
+    .timeline-item::before {
+        width: 14px;
+        height: 14px;
+        left: -27px !important;
+    }
+
+    .timeline-item h3 {
+        font-size: 18px;
+    }
+
+    .timeline-item p,
+    .timeline-item span {
+        font-size: 14px;
+    }
 }
 
 /* Projects */
