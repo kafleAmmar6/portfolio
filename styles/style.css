@@ -182,13 +182,14 @@ section h2 {
 
 /* Timeline dots */
 .timeline-item::before {
-    content: "   ";
+    content: "";
     position: absolute;
     width: 18px;
     height: 18px;
     background: #f72585;
     border-radius: 50%;
     top: 25px;
+    left:15px;
 }
 
 /* Left card dot */
