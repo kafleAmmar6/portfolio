@@ -189,7 +189,6 @@ section h2 {
     background: #f72585;
     border-radius: 50%;
     top: 25px;
-    left:15px;
 }
 
 /* Left card dot */
@@ -205,7 +204,6 @@ section h2 {
 .timeline-item h3 {
     color: #f72585;
     margin-bottom: 10px;
-    padding-left:18px;
 }
 
 .timeline-item span {
