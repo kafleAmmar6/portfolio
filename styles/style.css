@@ -121,7 +121,7 @@ header p {
 /* Sections */
 section {
     padding: 100px 20px;
-    text-align: right;
+    text-align: center;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
@@ -132,6 +132,11 @@ section h2 {
     margin-bottom: 30px;
     color: #f72585;
     text-shadow: 0 0 10px #f72585;
+}
+
+section p {
+    
+   text-align: right;
 }
 
 /* Timeline (Education) */
