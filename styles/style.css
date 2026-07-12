@@ -121,7 +121,7 @@ header p {
 /* Sections */
 section {
     padding: 100px 20px;
-    text-align: center;
+    text-align: right;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
