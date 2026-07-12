@@ -413,6 +413,10 @@ footer {
         font-size: 2rem;
     }
 
+    .abouttext {
+        font-size: 1rem;
+    }
+
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
