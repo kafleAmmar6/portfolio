@@ -134,26 +134,77 @@ section h2 {
     text-shadow: 0 0 10px #f72585;
 }
 
-/* Education */
-.educations-grid {
+/* Timeline (Education) */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-between;
 }
 
-.education-card {
-    background: #1a1a1a;
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #7209b7;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    width: 90%;
     padding: 20px;
-    border-radius: 15px;
-    width: 300px;
-    box-shadow: 0 0 15px #7209b7;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7209b7;
+    position: relative;
+    text-align: left;
 }
 
-.education-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px #f72585, 0 0 40px #7209b7;
+.timeline-item.left {
+    margin-right: 5%;
+}
+
+.timeline-item.right {
+    margin-left: 5%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f72585;
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-item.left::after {
+    right: -10px;
+}
+
+.timeline-item.right::after {
+    left: -10px;
+}
+
+.timeline-item h3 {
+    margin-bottom: 10px;
+    color: #f72585;
+}
+
+.timeline-item span {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.timeline-item p {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 /* Projects */
