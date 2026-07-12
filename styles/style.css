@@ -137,7 +137,7 @@ section h2 {
 /* Timeline (Education) */
 .timeline {
     position: relative;
-    max-width: 1600px;
+    max-width: 1800px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -194,7 +194,7 @@ section h2 {
 .timeline-item h3 {
     margin-bottom: 10px;
     color: #f72585;
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 .timeline-item span {
