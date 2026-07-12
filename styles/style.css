@@ -134,12 +134,13 @@ section h2 {
     text-shadow: 0 0 10px #f72585;
 }
 
-.abouttext {
-    
+.abouttext-item {
+    position: relative;
+    display:flex;
    text-align: left;
    font-size: 1.1rem;
-   padding-left: 500px;
-   padding-right: 500px;
+   padding-left: 30px;
+   padding-right: 30px;
 }
 
 /* Timeline (Education) */
