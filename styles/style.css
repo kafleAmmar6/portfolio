@@ -137,7 +137,7 @@ section h2 {
 /* Timeline (Education) */
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 600px;
     margin: auto;
     display: flex;
     justify-content: space-between;
