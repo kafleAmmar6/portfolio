@@ -137,7 +137,7 @@ section h2 {
 .abouttext-item {
     position: relative;
     display:flex;
-   text-align: left;
+   text-align: center;
    font-size: 1.1rem;
    padding-left: 500px;
    padding-right: 500px;
